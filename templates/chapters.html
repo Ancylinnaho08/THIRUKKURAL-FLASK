@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chapters | Thirukkural</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <span class="logo-icon">❖</span>
+        <span>THIRUKKURAL</span>
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/search">Explore</a>
+        <a href="/chapters" class="active">Chapters</a>
+        <a href="/favourites">Favourites</a>
+        <a href="/about">About</a>
+    </nav>
+
+    <button class="theme-btn" id="themeBtn">☾</button>
+
+</header>
+
+
+<main class="chapters-page">
+
+    <div class="chapters-heading">
+
+        <p class="small-title">THE COLLECTION</p>
+
+        <h1>Explore the Chapters</h1>
+
+        <p>
+            Discover the 133 chapters and the timeless wisdom
+            within each one.
+        </p>
+
+    </div>
+
+
+    <div class="section-card">
+
+        <div class="section-icon">01</div>
+
+        <div class="section-info">
+
+            <span class="section-tag">ARATHUPPAL</span>
+
+            <h2>அறத்துப்பால்</h2>
+
+            <p>
+                Virtue · Chapters 1–38
+            </p>
+
+            <p class="section-description">
+                Teachings about virtue, righteousness,
+                character and the foundation of a good life.
+            </p>
+
+        </div>
+
+        <a href="/kural/1" class="section-btn">
+            Explore →
+        </a>
+
+    </div>
+
+
+    <div class="section-card">
+
+        <div class="section-icon">02</div>
+
+        <div class="section-info">
+
+            <span class="section-tag">PORUTPAL</span>
+
+            <h2>பொருட்பால்</h2>
+
+            <p>
+                Wealth · Chapters 39–108
+            </p>
+
+            <p class="section-description">
+                Wisdom about leadership, society,
+                friendship, governance and prosperity.
+            </p>
+
+        </div>
+
+        <a href="/kural/381" class="section-btn">
+            Explore →
+        </a>
+
+    </div>
+
+
+    <div class="section-card">
+
+        <div class="section-icon">03</div>
+
+        <div class="section-info">
+
+            <span class="section-tag">INBATHUPPAL</span>
+
+            <h2>இன்பத்துப்பால்</h2>
+
+            <p>
+                Love · Chapters 109–133
+            </p>
+
+            <p class="section-description">
+                Explore the emotions, experiences and
+                beauty of love and relationships.
+            </p>
+
+        </div>
+
+        <a href="/kural/1081" class="section-btn">
+            Explore →
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        ❖ THIRUKKURAL
+    </div>
+
+    <p>
+        Preserving timeless wisdom for a modern generation.
+    </p>
+
+    <span>
+        © 2026 Thirukkural Explorer
+    </span>
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

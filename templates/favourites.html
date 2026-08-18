@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Favourites | Thirukkural</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <span class="logo-icon">❖</span>
+        <span>THIRUKKURAL</span>
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/search">Explore</a>
+        <a href="/chapters">Chapters</a>
+        <a href="/favourites" class="active">Favourites</a>
+        <a href="/about">About</a>
+    </nav>
+
+    <button class="theme-btn" id="themeBtn">
+        ☾
+    </button>
+
+</header>
+
+
+<main class="favourites-page">
+
+    <div class="favourites-heading">
+
+        <p class="small-title">
+            YOUR COLLECTION
+        </p>
+
+        <h1>
+            Favourite Kurals
+        </h1>
+
+        <p>
+            Your personally saved Thirukkural couplets.
+        </p>
+
+    </div>
+
+
+    <!-- FAVOURITES WILL LOAD HERE -->
+
+    <div id="favouritesContainer"></div>
+
+
+    <!-- EMPTY STATE -->
+
+    <div
+        id="emptyFavourites"
+        class="empty-favourites">
+
+        <div class="empty-icon">
+            ♡
+        </div>
+
+        <h2>
+            No favourites yet
+        </h2>
+
+        <p>
+            Save a Kural you love and it will appear here.
+        </p>
+
+        <a
+            href="/search"
+            class="primary-btn">
+
+            Explore Kurals →
+
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        ❖ THIRUKKURAL
+    </div>
+
+    <p>
+        Preserving timeless wisdom for a modern generation.
+    </p>
+
+    <span>
+        © 2026 Thirukkural Explorer
+    </span>
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

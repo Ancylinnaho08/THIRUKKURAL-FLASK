@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Kurals | Thirukkural</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <span class="logo-icon">❖</span>
+        <span>THIRUKKURAL</span>
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/search" class="active">Explore</a>
+        <a href="/chapters">Chapters</a>
+        <a href="/favourites">Favourites</a>
+        <a href="/about">About</a>
+    </nav>
+
+    <button class="theme-btn" id="themeBtn">☾</button>
+
+</header>
+
+
+<main class="explore-page">
+
+    <div class="explore-heading">
+
+        <p class="small-title">EXPLORE</p>
+
+        <h1>Discover the Kurals</h1>
+
+        <p>
+            Explore all 1330 timeless couplets of Thirukkural.
+        </p>
+
+    </div>
+
+
+    <div class="explore-search">
+
+        <input
+            type="number"
+            id="exploreInput"
+            min="1"
+            max="1330"
+            placeholder="Enter Kural number (1 - 1330)"
+        >
+
+        <button onclick="exploreKural()">
+            Search Kural
+        </button>
+
+    </div>
+
+
+    <div class="quick-links">
+
+        <a href="/kural/1">Kural 1</a>
+        <a href="/kural/100">Kural 100</a>
+        <a href="/kural/500">Kural 500</a>
+        <a href="/kural/1000">Kural 1000</a>
+        <a href="/kural/1330">Kural 1330</a>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        ❖ THIRUKKURAL
+    </div>
+
+    <p>
+        Preserving timeless wisdom for a modern generation.
+    </p>
+
+    <span>
+        © 2026 Thirukkural Explorer
+    </span>
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

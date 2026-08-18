@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thirukkural | Timeless Wisdom</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">❖</span>
+            <span>THIRUKKURAL</span>
+        </div>
+
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="/search">Explore</a>
+            <a href="/chapters">Chapters</a>
+            <a href="/favourites">Favourites</a>
+            <a href="/about">About</a>
+        </nav>
+
+        <button class="theme-btn" id="themeBtn">☾</button>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">1330 COUPLETS · ONE TIMELESS WISDOM</p>
+
+            <h1>
+                Wisdom for
+                <span>Every Life.</span>
+            </h1>
+
+            <p class="hero-text">
+                Explore the timeless teachings of Thirukkural,
+                beautifully presented for the modern world.
+            </p>
+
+
+            <!-- SEARCH -->
+            <div class="search-box">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    placeholder="Search by Kural number or keyword..."
+                    id="searchInput"
+                >
+
+                <button onclick="searchKural()">
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- HERO BUTTONS -->
+            <div class="hero-buttons">
+
+                <a href="/search" class="primary-btn">
+                    Explore Kurals →
+                </a>
+
+                <button class="secondary-btn" onclick="randomKural()">
+                    ✦ Random Kural
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- DECORATIVE SIDE -->
+        <div class="hero-decoration">
+
+            <div class="circle circle-one"></div>
+            <div class="circle circle-two"></div>
+
+            <div class="quote-mark">“</div>
+
+            <p>
+                அறத்துப்பால்
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- KURAL SECTION -->
+    <section class="kural-section">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="small-title">TODAY'S WISDOM</p>
+
+                <h2>Kural of the Day</h2>
+            </div>
+
+            <span class="kural-number">
+                KURAL {{ kural.number }}
+            </span>
+
+        </div>
+
+
+        <!-- KURAL CARD -->
+        <div class="kural-card">
+
+            <div class="card-top">
+
+                <span class="chapter">
+                    {{ kural.athigaram }}
+                </span>
+
+                <button
+                    class="favorite-btn"
+                    onclick="toggleFavourite()"
+                    id="favoriteBtn"
+                >
+                    ♡
+                </button>
+
+            </div>
+
+
+            <!-- TAMIL KURAL -->
+            <div class="tamil-kural">
+
+                <p>
+                    {{ kural.line1 }}
+                </p>
+
+                <p>
+                    {{ kural.line2 }}
+                </p>
+
+            </div>
+
+
+            <div class="divider"></div>
+
+
+            <!-- MEANING -->
+            <div class="meaning-grid">
+
+                <div class="meaning">
+
+                    <p class="label">
+                        தமிழ் உரை
+                    </p>
+
+                    <p>
+                        {{ kural.urai1 }}
+                    </p>
+
+                </div>
+
+
+                <div class="meaning">
+
+                    <p class="label">
+                        ENGLISH TRANSLATION
+                    </p>
+
+                    <p>
+                        {{ kural.translation }}
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD FOOTER -->
+            <div class="card-footer">
+
+                <span>
+                    Thirukkural · Kural {{ kural.number }}
+                </span>
+
+                <button
+                    class="copy-btn"
+                    onclick="copyKural()"
+                >
+                    ⧉ Copy Kural
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPLORE SECTION -->
+    <section class="explore-section">
+
+        <div class="explore-card">
+
+            <div>
+                <p class="small-title">EXPLORE THE COLLECTION</p>
+
+                <h2>Discover all 1330 Kurals</h2>
+
+                <p>
+                    Browse through chapters and discover wisdom
+                    covering virtue, wealth and love.
+                </p>
+            </div>
+
+            <a href="/chapters" class="primary-btn">
+                Explore Chapters →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            ❖ THIRUKKURAL
+        </div>
+
+        <p>
+            Preserving timeless wisdom for a modern generation.
+        </p>
+
+        <span>
+            © 2026 Thirukkural Explorer
+        </span>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

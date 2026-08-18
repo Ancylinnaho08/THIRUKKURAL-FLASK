@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kural {{ kural.number }} | Thirukkural</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">❖</span>
+            <span>THIRUKKURAL</span>
+        </div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/search">Explore</a>
+            <a href="/chapters">Chapters</a>
+            <a href="/favourites">Favourites</a>
+            <a href="/about">About</a>
+        </nav>
+
+        <button class="theme-btn" id="themeBtn">
+            ☾
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+         KURAL DETAIL
+    ========================== -->
+
+    <main class="kural-detail">
+
+        <a href="/" class="back-link">
+            ← Back to Home
+        </a>
+
+
+        <!-- HEADER -->
+
+        <div class="detail-header">
+
+            <p class="small-title">
+                THIRUKKURAL
+            </p>
+
+            <h1>
+                Kural {{ kural.number }}
+            </h1>
+
+            <p class="chapter-detail">
+                {{ kural.athigaram }}
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             KURAL CARD
+        ========================== -->
+
+        <div class="detail-card">
+
+
+            <!-- TOP -->
+
+            <div class="detail-top">
+
+                <span class="chapter">
+                    {{ kural.athigaram }}
+                </span>
+
+
+                <!-- HEART BUTTON -->
+
+                <button
+                    class="favorite-btn"
+                    id="favoriteBtn"
+                    onclick="toggleFavourite()"
+                    title="Add to Favourite">
+
+                    ♡
+
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 TAMIL KURAL
+            ========================== -->
+
+            <div class="tamil-kural">
+
+                <p>
+                    {{ kural.line1 }}
+                </p>
+
+                <p>
+                    {{ kural.line2 }}
+                </p>
+
+            </div>
+
+
+            <div class="divider"></div>
+
+
+            <!-- =========================
+                 MEANINGS
+            ========================== -->
+
+            <div class="meaning-grid">
+
+
+                <!-- TAMIL MEANING -->
+
+                <div class="meaning">
+
+                    <p class="label">
+                        தமிழ் உரை
+                    </p>
+
+                    <p>
+                        {{ kural.urai1 }}
+                    </p>
+
+                </div>
+
+
+                <!-- ENGLISH TRANSLATION -->
+
+                <div class="meaning">
+
+                    <p class="label">
+                        ENGLISH TRANSLATION
+                    </p>
+
+                    <p>
+                        {{ kural.translation }}
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 ACTION BUTTONS
+            ========================== -->
+
+            <div class="detail-actions">
+
+
+                <!-- COPY -->
+
+                <button
+                    class="secondary-btn"
+                    onclick="copyKural()">
+
+                    📋 Copy Kural
+
+                </button>
+
+
+                <!-- FAVOURITE -->
+
+                <button
+                    class="secondary-btn favourite-action"
+                    id="favouriteAction"
+                    onclick="toggleFavourite()">
+
+                    ♡ Add to Favourite
+
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 PREVIOUS / NEXT
+            ========================== -->
+
+            <div class="kural-navigation">
+
+
+                {% if kural.number > 1 %}
+
+                <a
+                    href="/kural/{{ kural.number - 1 }}"
+                    class="nav-btn">
+
+                    ← Previous
+
+                </a>
+
+                {% else %}
+
+                <span></span>
+
+                {% endif %}
+
+
+                {% if kural.number < 1330 %}
+
+                <a
+                    href="/kural/{{ kural.number + 1 }}"
+                    class="nav-btn">
+
+                    Next →
+
+                </a>
+
+                {% endif %}
+
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            ❖ THIRUKKURAL
+        </div>
+
+        <p>
+            Preserving timeless wisdom for a modern generation.
+        </p>
+
+        <span>
+            © 2026 Thirukkural Explorer
+        </span>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | Thirukkural</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <span class="logo-icon">❖</span>
+        <span>THIRUKKURAL</span>
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/search">Explore</a>
+        <a href="/chapters">Chapters</a>
+        <a href="/favourites">Favourites</a>
+        <a href="/about" class="active">About</a>
+    </nav>
+
+    <button class="theme-btn" id="themeBtn">
+        ☾
+    </button>
+
+</header>
+
+
+<main class="about-page">
+
+    <!-- HERO -->
+
+    <section class="about-hero">
+
+        <p class="small-title">
+            ABOUT THE PROJECT
+        </p>
+
+        <h1>
+            Timeless Wisdom.<br>
+            Modern Experience.
+        </h1>
+
+        <p>
+            Thirukkural is one of the greatest works of Tamil
+            literature, offering timeless wisdom on virtue,
+            society, leadership and love.
+        </p>
+
+    </section>
+
+
+    <!-- ABOUT KURAL -->
+
+    <section class="about-card">
+
+        <div class="about-number">
+            1330
+        </div>
+
+        <div>
+
+            <h2>
+                1330 Couplets
+            </h2>
+
+            <p>
+                Thirukkural consists of 1330 couplets,
+                divided into 133 chapters across three major
+                sections — Aram, Porul and Inbam.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- THREE SECTIONS -->
+
+    <section class="about-sections">
+
+        <div class="about-section-card">
+
+            <span>01</span>
+
+            <h2>
+                அறத்துப்பால்
+            </h2>
+
+            <h3>
+                Aram · Virtue
+            </h3>
+
+            <p>
+                Wisdom about righteousness, character,
+                compassion and living a meaningful life.
+            </p>
+
+        </div>
+
+
+        <div class="about-section-card">
+
+            <span>02</span>
+
+            <h2>
+                பொருட்பால்
+            </h2>
+
+            <h3>
+                Porul · Wealth
+            </h3>
+
+            <p>
+                Teachings about leadership, society,
+                friendship, governance and prosperity.
+            </p>
+
+        </div>
+
+
+        <div class="about-section-card">
+
+            <span>03</span>
+
+            <h2>
+                இன்பத்துப்பால்
+            </h2>
+
+            <h3>
+                Inbam · Love
+            </h3>
+
+            <p>
+                Exploring love, emotions, relationships
+                and the beauty of human connection.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECT -->
+
+    <section class="project-card">
+
+        <p class="small-title">
+            THIS PROJECT
+        </p>
+
+        <h2>
+            Thirukkural Explorer
+        </h2>
+
+        <p>
+            This web application brings the timeless wisdom
+            of Thirukkural into a simple and modern digital
+            experience. Users can explore Kurals, search by
+            number, discover chapters and save their favourite
+            couplets.
+        </p>
+
+        <div class="tech-stack">
+
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Flask</span>
+            <span>REST API</span>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        ❖ THIRUKKURAL
+    </div>
+
+    <p>
+        Preserving timeless wisdom for a modern generation.
+    </p>
+
+    <span>
+        © 2026 Thirukkural Explorer
+    </span>
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
